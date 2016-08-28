@@ -1,18 +1,20 @@
 <div>
 
 <head>
-  <h3> Please sign in below </h3>
+  <h3> Please sign up below </h3>
 </head>
 
-<form ng-submit="signup()">
+<form ng-submit="signup(firstName, lastName, email, username, password)">
   <input ng-model="firstName" type="text" placeholder="First Name"></input>
   <br>
   <input ng-model="lastName" type="text" placeholder="Last Name"></input>
   <br>
-  <input ng-model="username" type="text" placeholder="username"></input>
+  <input ng-model="email" type="text" placeholder="Email"></input>
   <br>
-  </input ng-model="password" type="password" placeholder="password"></input>
-  <button type="submit"></button>
+  <input ng-model="username" type="text" placeholder="Username"></input>
+  <br>
+  <input ng-model="password" type="password" placeholder="Password"></input>
+  <button type="submit">Submit</button>
 <form>
 
 </div>

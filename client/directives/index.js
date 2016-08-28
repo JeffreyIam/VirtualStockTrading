@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('theApp',['ngRoute'])
+    .module('theApp',['main','login','signup','ngRoute'])
     .controller('mainController', mainController)
     .config(appConfig);
 
@@ -16,13 +16,15 @@
       })
       .when('/main', {
         templateUrl: 'views/mainPage.html',
-        // controller: 'mainPageController'
+        controller: 'mainPageController'
       })
       .when('/login', {
-        templateUrl: 'views/login.html'
+        templateUrl: 'views/login.html',
+        controller: 'loginController'
       })
       .when('/signup', {
-        templateUrl: 'views/signup.html'
+        templateUrl: 'views/signup.html',
+        controller: 'signupController'
       })
       .when('/forum', {
         templateUrl: 'views/forum.html'
@@ -44,7 +46,6 @@
     mainController.$inject = ['$scope']
 
     function mainController($scope) {
-      // $scope.message = message;
 
       $scope.message = 'hey';
     }

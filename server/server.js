@@ -1,13 +1,13 @@
 var express = require('express');
 var http = require('http');
 var bodyParser = require('body-parser');
-var router = require('./config/routes.js')
+var router = require('../server/config/routes.js')
 
 var app = express();
 
 app.use(bodyParser.json());
-
-app.use(express.static(__dirname + '/client'));
+app.use('/', router);
+app.use(express.static(__dirname + '/../client'));
 
 var port = process.env.PORT || 9000;
 
