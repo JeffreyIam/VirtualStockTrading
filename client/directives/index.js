@@ -2,8 +2,7 @@
   'use strict';
 
   angular
-    .module('theApp',['main','login','signup','ngRoute'])
-    .controller('mainController', mainController)
+    .module('theApp',['watchlist', 'main','login','signup','ngRoute'])
     .config(appConfig);
 
     appConfig.$inject = ['$routeProvider', '$httpProvider', '$locationProvider']
@@ -33,7 +32,8 @@
         templateUrl: 'views/chart.html'
       })
       .when('/watchlist', {
-        templateUrl: 'views/watchlist.html'
+        templateUrl: 'views/watchlist.html',
+        controller: 'watchlistController'
       })
       .when('/dashboard', {
         templateUrl: 'views/dashboard.html'
@@ -41,13 +41,6 @@
       .when('/messages', {
         templateUrl: 'views/messages.html'
       })
-    }
-
-    mainController.$inject = ['$scope']
-
-    function mainController($scope) {
-
-      $scope.message = 'hey';
     }
 
 })();

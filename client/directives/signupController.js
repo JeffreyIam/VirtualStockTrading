@@ -5,9 +5,9 @@
   .module('signup',['theApp'])
   .controller('signupController', signupController);
 
-  signupController.$inject = ['$scope','$http'];
+  signupController.$inject = ['$scope','$http','$window'];
 
-  function signupController($scope,$http) {
+  function signupController($scope,$http,$window) {
     $scope.signup = signup;
 
     function signup(first,last,email,user,pass) {
@@ -22,9 +22,8 @@
           password: pass
         }
       });
+          $window.location.href = '#/login'
     }
   }
-
-
 
 })();

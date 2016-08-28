@@ -1,1 +1,31 @@
-watchlist
+<div>
+
+<form ng-submit="getstock(ticker)">
+  <input ng-model="ticker" type="text" placeholder="Stock Ticker"></input>
+  <button type="submit">Submit</button>
+<form>
+
+<!-- ng-repeat  -->
+<table>
+  <tr>
+    <th>Symbol </th>
+    <th>Price ($)</th>
+    <th>Open ($) </th>
+    <th>Close ($)) </th>
+    <th>Day Range </th>
+
+  </tr>
+  <tr>
+    <td>{{symbol}}</td>
+    <td>${{price}}</td>
+    <td>${{open}}</td>
+    <td>${{close}}</td>
+    <td>${{high}} - ${{low}}</td>
+  </tr>
+</table>
+
+
+
+
+
+</div>
